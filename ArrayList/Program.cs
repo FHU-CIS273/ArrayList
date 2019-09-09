@@ -6,9 +6,14 @@ namespace ArrayList
     {
         static void Main(string[] args)
         {
-            IList list = null;
+            ArrayList arrayList = new ArrayList();
 
-            list.Append(23);
+
+            arrayList.Append(3);
+            arrayList.Append(5);
+            arrayList.Append(7);
+            arrayList.Append(9);
+
         }
     }
 }
