@@ -62,14 +62,18 @@ namespace ArrayList
             return false;
         }
 
-        public void InsertAfter(int existingItem, int newItem)
+        public bool InsertAfter(int existingItem, int newItem)
         {
             int index = IndexOf(existingItem);
+            
             if (index != -1)
             {
                 ShiftRight(index);
                 backingArray[index] = newItem;
+                count++;
             }
+
+            return (index != -1);
         }
 
         public void Prepend(int item)
@@ -141,7 +145,6 @@ namespace ArrayList
             }
         }
 
-        // TODO
         private void Resize()
         {
             Array.Resize<int>(ref backingArray, backingArray.Length * 2);
