@@ -26,6 +26,29 @@ namespace ArrayList
             count++;
         }
 
+        public int this[int index]
+        {
+            get
+            {
+                if( index < 0 || index >= count)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+
+                return backingArray[index];
+            }
+
+            set
+            {
+                if (index < 0 || index >= count)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+
+                backingArray[index] = value;
+            }
+        }
+
         public bool Contains(int item)
         {
             foreach(var thing in backingArray)
@@ -70,7 +93,13 @@ namespace ArrayList
         // TODO
         public IList Reverse()
         {
-            throw new NotImplementedException();
+            IList reversed = new ArrayList();
+            
+            // do the work;
+
+            return reversed;
+
+            //throw new NotImplementedException();
         }
 
         public int IndexOf(int item)
@@ -115,7 +144,7 @@ namespace ArrayList
         // TODO
         private void Resize()
         {
-
+            Array.Resize<int>(ref backingArray, backingArray.Length * 2);
         }
     }
 }

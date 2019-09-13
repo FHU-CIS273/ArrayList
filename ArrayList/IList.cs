@@ -13,7 +13,5 @@ namespace ArrayList
         int Length { get; }
         bool IsEmpty { get; }
 
-
-
     }
 }

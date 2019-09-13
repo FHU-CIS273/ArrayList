@@ -8,6 +8,9 @@ namespace ArrayList
         {
             ArrayList arrayList = new ArrayList();
 
+            arrayList[5] = 19;
+
+            int i = arrayList[0];
 
             arrayList.Append(3);
             arrayList.Append(5);
