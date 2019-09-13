@@ -80,6 +80,10 @@ namespace ArrayList
             return (index != -1);
         }
 
+        /***
+         *
+         * Add item to the front of the arrayList.
+         */
         public void Prepend(int item)
         {
             if (count == backingArray.Length)
