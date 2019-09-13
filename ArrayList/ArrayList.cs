@@ -62,6 +62,10 @@ namespace ArrayList
             return false;
         }
 
+        /***
+         * Returns true if existing element was found in the arrayList;
+         * otherwise, returns false.
+         */
         public bool InsertAfter(int existingItem, int newItem)
         {
             int index = IndexOf(existingItem);
